@@ -18,9 +18,9 @@
   ],
   "sources": [
     {
-      "type": "git",
-      "url": "https://gitlab.freedesktop.org/xorg/xserver.git",
-      "commit": "7515c23a416825f0db51f9b445279b12d5918ebf"
+      "type": "archive",
+      "url": "https://gitlab.freedesktop.org/xorg/xserver/-/archive/xorg-server-21.1.0/xserver-xorg-server-21.1.0.tar.bz2",
+      "sha256": "f8fe88731d8bde9b9d889ea9c4c397ffc7e963111b1feba6c4d935dd8a38ec92"
     },
     {
       "type": "file",
@@ -131,9 +131,9 @@
       ],
       "sources": [
         {
-          "type": "git",
-          "url": "https://gitlab.freedesktop.org/xorg/app/xauth.git",
-          "commit": "18a3c3a7672ff5d65bf0b79b89464eac7540b95b"
+          "type": "archive",
+          "url": "https://gitlab.freedesktop.org/xorg/app/xauth/-/archive/xauth-1.1.1/xauth-xauth-1.1.1.tar.bz2",
+          "sha256": "921231133efd77091788afaf177e437922c727976391434cfcbffb95b77be81a"
         }
       ]
     }
