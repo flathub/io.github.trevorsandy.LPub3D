@@ -217,6 +217,10 @@
               "build-options": {
                   "cxxflags": "-std=c++14"
               },
+              "cleanup": [
+                "*.la",
+                "*.so"
+              ],
               "config-opts": [
                 "--disable-static"
               ],
@@ -247,7 +251,9 @@
             "/include",
             "/share/doc",
             "/share/aclocal",
-            "/lib/libIlmImfUtil*"
+            "/lib/libIlmImfUtil*",
+            "*.la",
+            "*.so"
           ],
           "sources": [
             {
@@ -283,9 +289,10 @@
       "sources": [
         {
           "type": "git",
-          "url": "https://github.com/trevorsandy/lpub3d-ci.git",
-          "commit": "a0952ffe4b7640e8bbf69589d721256bfa944845"
-        }      
+          "url": "https://github.com/trevorsandy/lpub3d.git",
+          "tag": "v2.4.3",
+          "commit": "311724381fd2916d3caea9b302f1d005958d4867"
+        }
       ],
       "post-install": [
         "mv ${FLATPAK_DEST}/share/mime/packages/lpub3d.xml ${FLATPAK_DEST}/share/mime/packages/${FLATPAK_ID}.xml",
@@ -302,11 +309,11 @@
         "env": {
           "FLATPAK_BUILD_CHECK": "1",
           "LP3D_CHECK_STATUS": "--version --app-paths",
-          "LP3D_BUILD_OS": "flatpak", 
-          "LP3D_CHECK_LDD": "1",         
+          "LP3D_BUILD_OS": "flatpak",
+          "LP3D_CHECK_LDD": "1",
           "LPUB3D_DEST": "/app",
           "SOURCE_DIR": "/run/build/build-check",
-          "QT_QPA_PLATFORM": "xcb",         
+          "QT_QPA_PLATFORM": "xcb",
           "QT_QPA_PLATFORM_PLUGIN_PATH": "/usr/lib/plugins",
           "QT_PLUGIN_PATH": "/usr/lib/plugins"
         }
@@ -314,7 +321,7 @@
       "build-commands": [
         "./builds/check/build_checks.sh"
       ],
-      "sources": [     
+      "sources": [
         {
           "type": "shell",
           "commands": [
