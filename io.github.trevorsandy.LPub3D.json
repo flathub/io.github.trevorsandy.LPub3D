@@ -186,7 +186,8 @@
         {
           "type": "git",
           "url": "https://github.com/trevorsandy/povray.git",
-          "commit": "59f04740497a259d94922eeebc4ccff34e7510f2"
+          "//": "This is the branch lpub3d/raytracer-cui",
+          "commit": "c24ba4171a6a33bc46136c2f1be559417e36b446"
         }
       ],
       "modules": [
@@ -195,7 +196,7 @@
           "buildsystem": "simple",
           "cleanup": [
             "/include",
-            "/lib/libboost_*.a"
+            "*.a"
           ],
           "build-commands": [
             "./bootstrap.sh --prefix=${FLATPAK_DEST} --with-libraries=date_time,thread",
@@ -217,6 +218,10 @@
               "build-options": {
                   "cxxflags": "-std=c++14"
               },
+              "cleanup": [
+                "*.la",
+                "*.so"
+              ],
               "config-opts": [
                 "--disable-static"
               ],
@@ -247,7 +252,9 @@
             "/include",
             "/share/doc",
             "/share/aclocal",
-            "/lib/libIlmImfUtil*"
+            "/lib/libIlmImfUtil*",
+            "*.la",
+            "*.so"
           ],
           "sources": [
             {
@@ -283,9 +290,14 @@
       "sources": [
         {
           "type": "git",
-          "url": "https://github.com/trevorsandy/lpub3d-ci.git",
-          "commit": "a0952ffe4b7640e8bbf69589d721256bfa944845"
-        }      
+          "url": "https://github.com/trevorsandy/lpub3d.git",
+          "tag": "v2.4.4",
+          "commit": "e34f20a6ecc08cd3394a3521d2e2d3bc5bc420c7"
+        },
+        {
+          "type": "patch",
+          "path": "lpub3d-apppdata.patch"
+        }
       ],
       "post-install": [
         "mv ${FLATPAK_DEST}/share/mime/packages/lpub3d.xml ${FLATPAK_DEST}/share/mime/packages/${FLATPAK_ID}.xml",
@@ -302,11 +314,11 @@
         "env": {
           "FLATPAK_BUILD_CHECK": "1",
           "LP3D_CHECK_STATUS": "--version --app-paths",
-          "LP3D_BUILD_OS": "flatpak", 
-          "LP3D_CHECK_LDD": "1",         
+          "LP3D_BUILD_OS": "flatpak",
+          "LP3D_CHECK_LDD": "1",
           "LPUB3D_DEST": "/app",
           "SOURCE_DIR": "/run/build/build-check",
-          "QT_QPA_PLATFORM": "xcb",         
+          "QT_QPA_PLATFORM": "xcb",
           "QT_QPA_PLATFORM_PLUGIN_PATH": "/usr/lib/plugins",
           "QT_PLUGIN_PATH": "/usr/lib/plugins"
         }
@@ -314,7 +326,7 @@
       "build-commands": [
         "./builds/check/build_checks.sh"
       ],
-      "sources": [     
+      "sources": [
         {
           "type": "shell",
           "commands": [
