@@ -139,7 +139,7 @@
         }
       ],
       "post-install": [
-        "mv -f /run/build/ldglite/app/build_staging/* ${FLATPAK_DEST}/build_staging/",
+        "mv -f app/build_staging/* ${FLATPAK_DEST}/build_staging/",
         "if test -d ${FLATPAK_DEST}/build_staging/ldglite-1.3; then echo \"LDGLite staged to ${FLATPAK_DEST}/build_staging/ldglite-1.3.\"; fi"
       ]
     },
@@ -292,7 +292,7 @@
           "type": "git",
           "url": "https://github.com/trevorsandy/lpub3d.git",
           "tag": "v2.4.4",
-          "commit": "e34f20a6ecc08cd3394a3521d2e2d3bc5bc420c7"
+          "commit": "0ba24afe3562139f982a091564c5d262f0bcd635"
         },
         {
           "type": "patch",
@@ -302,7 +302,7 @@
       "post-install": [
         "mv ${FLATPAK_DEST}/share/mime/packages/lpub3d.xml ${FLATPAK_DEST}/share/mime/packages/${FLATPAK_ID}.xml",
         "cd ${FLATPAK_DEST}/share/icons/hicolor; for d in */mimetypes/; do for f in ${d}*; do mv \"$f\" \"${d}${FLATPAK_ID}.$(basename $f)\"; done; done",
-        "cp -a /run/build/lpub3d/builds/check ${FLATPAK_DEST}/build_staging/ && echo \"Check bundle copied to ${FLATPAK_DEST}/build_staging/check.\""
+        "cp -a builds/check ${FLATPAK_DEST}/build_staging/ && echo \"Check bundle copied to ${FLATPAK_DEST}/build_staging/check.\""
       ]
     },
     {
