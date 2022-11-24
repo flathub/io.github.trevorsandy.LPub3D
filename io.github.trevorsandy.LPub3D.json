@@ -295,6 +295,10 @@
           "url": "https://github.com/trevorsandy/lpub3d.git",
           "tag": "v2.4.5",
           "commit": "099138f55ff78f72a08990019c98507276339077"
+        },
+        {
+          "type": "patch",
+          "path": "lpub3d-square-mime-icons.patch"
         }
       ],
       "post-install": [
