@@ -93,19 +93,19 @@
         {
           "type": "file",
           "dest-filename": "complete.zip",
-          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/complete-20-03.zip",
-          "sha256": "85cf747b5923f18a8d0f37d0cef647636d70ddfeda5de49ea019e7e440f9e4e0"
+          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/complete-22-05.zip",
+          "sha256": "0f25724259ee4b7e747b9ff219a803412e448fe52c1e0beeb90661d03fea6ff0"
         },
         {
           "type": "file",
           "dest-filename": "lpub3dldrawunf.zip",
-          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/lpub3dldrawunf-01-04-21.zip",
-          "sha256": "f0266006c4b7114e4f4719801696fbe8780cf9d767e948fb6478c752989cbee8"
+          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/lpub3dldrawunf-22-11-24.zip",
+          "sha256": "7251ffb1a25ae9a6aa133446342f7c19ed6ade3f3cce4a9dc9e0cd34d50c5a60"
         },
         {
           "type": "file",
           "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/tenteparts.zip",
-          "sha256": "7e1a68490b1be11bddcfb3180151b42ffbb85ce3aa8ec3f7431bee5c04cc1ac5"
+          "sha256": "95b65664c455f4895f480ab8e3ed9e96046ca69ee1b296922d76a369e2cf2846"
         },
         {
           "type": "file",
@@ -135,7 +135,7 @@
         {
           "type": "git",
           "url": "https://github.com/trevorsandy/ldglite.git",
-          "commit": "de4b06b718dbc67d495f316bd0143f6e59bc3f84"
+          "commit": "00fef0e79d4e7f3835d987d58a6140fd696121ee"
         }
       ],
       "post-install": [
@@ -161,7 +161,7 @@
         {
           "type": "git",
           "url": "https://github.com/trevorsandy/ldview.git",
-          "commit": "fc21e23dd7de24c07f0f37dc7cc36dd5bd252f3c"
+          "commit": "de7dc3ae2ab0a21f7aa6aa35d848db51c7227d3b"
         }
       ],
       "post-install": [
@@ -186,8 +186,8 @@
         {
           "type": "git",
           "url": "https://github.com/trevorsandy/povray.git",
-          "//": "This is the branch lpub3d/raytracer-cui",
-          "commit": "c24ba4171a6a33bc46136c2f1be559417e36b446"
+          "//": "Branch lpub3d/raytracer-cui",
+          "commit": "588ba80cc8a133dbb26c6e9f7bb1c3e8d4974313"
         }
       ],
       "modules": [
@@ -205,6 +205,7 @@
           "sources": [
             {
               "type": "archive",
+              "//": "Boost 1.60 rquirement fixed so later version can be used - see https://github.com/POV-Ray/povray/pull/340",
               "url": "https://downloads.sourceforge.net/project/boost/boost/1.60.0/boost_1_60_0.tar.bz2",
               "sha256": "686affff989ac2488f79a97b9479efb9f2abae035b5ed4d8226de6857933fd3b"
             }
@@ -259,6 +260,7 @@
           "sources": [
             {
               "type": "archive",
+              "//": "Can upgrade to OpenEXR 3.0 - see https://github.com/POV-Ray/povray/pull/423",
               "url": "https://download.savannah.nongnu.org/releases/openexr/openexr-2.2.1.tar.gz",
               "sha256": "8f9a5af6131583404261931d9a5c83de0a425cb4b8b25ddab2b169fbf113aecd"
             },
@@ -291,12 +293,8 @@
         {
           "type": "git",
           "url": "https://github.com/trevorsandy/lpub3d.git",
-          "tag": "v2.4.4",
-          "commit": "0ba24afe3562139f982a091564c5d262f0bcd635"
-        },
-        {
-          "type": "patch",
-          "path": "lpub3d-apppdata.patch"
+          "tag": "v2.4.5",
+          "commit": "099138f55ff78f72a08990019c98507276339077"
         }
       ],
       "post-install": [
