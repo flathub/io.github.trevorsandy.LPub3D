@@ -294,11 +294,7 @@
           "type": "git",
           "url": "https://github.com/trevorsandy/lpub3d.git",
           "tag": "v2.4.6",
-          "commit": "57fe8b6de5f4494663da49bb17687b528c761312"
-        },
-        {
-          "type": "patch",
-          "path": "lpub3d-square-mime-icons.patch"
+          "commit": "9aa1cb65d2a72acd39e86942afe9f93d83f7d842"
         }
       ],
       "post-install": [
