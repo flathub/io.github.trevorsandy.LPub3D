@@ -99,8 +99,8 @@
         {
           "type": "file",
           "dest-filename": "lpub3dldrawunf.zip",
-          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/lpub3dldrawunf-22-11-24.zip",
-          "sha256": "7251ffb1a25ae9a6aa133446342f7c19ed6ade3f3cce4a9dc9e0cd34d50c5a60"
+          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/lpub3dldrawunf-22-11-29.zip",
+          "sha256": "731da0880077c925e1cba9655e71f9eb01854edbd27d4d047fab542187ace565"
         },
         {
           "type": "file",
@@ -161,7 +161,7 @@
         {
           "type": "git",
           "url": "https://github.com/trevorsandy/ldview.git",
-          "commit": "de7dc3ae2ab0a21f7aa6aa35d848db51c7227d3b"
+          "commit": "6d8e21773de36fde5b87b60f715d400801a7e8bc"
         }
       ],
       "post-install": [
@@ -293,12 +293,8 @@
         {
           "type": "git",
           "url": "https://github.com/trevorsandy/lpub3d.git",
-          "tag": "v2.4.5",
-          "commit": "099138f55ff78f72a08990019c98507276339077"
-        },
-        {
-          "type": "patch",
-          "path": "lpub3d-square-mime-icons.patch"
+          "tag": "v2.4.6",
+          "commit": "9aa1cb65d2a72acd39e86942afe9f93d83f7d842"
         }
       ],
       "post-install": [
