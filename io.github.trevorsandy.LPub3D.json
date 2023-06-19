@@ -293,7 +293,6 @@
         {
           "type": "git",
           "url": "https://github.com/trevorsandy/lpub3d.git",
-          "tag": "v2.4.6",
           "commit": "be5d5fc5ac06c1e9189fab36d7eb94f64da89fd9"
         }
       ],
