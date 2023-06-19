@@ -94,23 +94,23 @@
           "type": "file",
           "dest-filename": "complete.zip",
           "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/complete-23-02.zip",
-          "sha256": "FB40CA44677C688AF32E056419B186C8A8B6F3CFB7C06E8C8717BB99C6007AD8"
+          "sha256": "fb40ca44677c688af32e056419b186c8a8b6f3cfb7c06e8c8717bb99c6007ad8"
         },
         {
           "type": "file",
           "dest-filename": "lpub3dldrawunf.zip",
           "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/lpub3dldrawunf-23-06-19.zip",
-          "sha256": "41ACEBC1EEBD4EF9D242581A79E575CB92E7D89E65CF8E729CA51108B1B0CBAC"
+          "sha256": "41acebc1eebd4ef9d242581a79e575cb92e7d89e65cf8e729ca51108b1b0cbac"
         },
         {
           "type": "file",
           "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/tenteparts.zip",
-          "sha256": "95B65664C455F4895F480AB8E3ED9E96046CA69EE1B296922D76A369E2CF2846"
+          "sha256": "95b65664c455f4895f480ab8e3ed9e96046ca69ee1b296922d76a369e2cf2846"
         },
         {
           "type": "file",
           "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/vexiqparts.zip",
-          "sha256": "E2F4114C8FF6BFE7E5A43B6C88FB47F32328DDB147578456EC0825AA76803B20"
+          "sha256": "e2f4114c8ff6bfe7e5a43b6c88fb47f32328ddb147578456ec0825aa76803b20"
         }
       ],
       "post-install": [
