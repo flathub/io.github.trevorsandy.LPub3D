@@ -93,24 +93,24 @@
         {
           "type": "file",
           "dest-filename": "complete.zip",
-          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/complete-22-05.zip",
-          "sha256": "0f25724259ee4b7e747b9ff219a803412e448fe52c1e0beeb90661d03fea6ff0"
+          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/complete-23-02.zip",
+          "sha256": "FB40CA44677C688AF32E056419B186C8A8B6F3CFB7C06E8C8717BB99C6007AD8"
         },
         {
           "type": "file",
           "dest-filename": "lpub3dldrawunf.zip",
-          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/lpub3dldrawunf-22-11-29.zip",
-          "sha256": "731da0880077c925e1cba9655e71f9eb01854edbd27d4d047fab542187ace565"
+          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/lpub3dldrawunf-23-06-19.zip",
+          "sha256": "41ACEBC1EEBD4EF9D242581A79E575CB92E7D89E65CF8E729CA51108B1B0CBAC"
         },
         {
           "type": "file",
           "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/tenteparts.zip",
-          "sha256": "95b65664c455f4895f480ab8e3ed9e96046ca69ee1b296922d76a369e2cf2846"
+          "sha256": "95B65664C455F4895F480AB8E3ED9E96046CA69EE1B296922D76A369E2CF2846"
         },
         {
           "type": "file",
           "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/vexiqparts.zip",
-          "sha256": "e2f4114c8ff6bfe7e5a43b6c88fb47f32328ddb147578456ec0825aa76803b20"
+          "sha256": "E2F4114C8FF6BFE7E5A43B6C88FB47F32328DDB147578456EC0825AA76803B20"
         }
       ],
       "post-install": [
@@ -135,7 +135,7 @@
         {
           "type": "git",
           "url": "https://github.com/trevorsandy/ldglite.git",
-          "commit": "00fef0e79d4e7f3835d987d58a6140fd696121ee"
+          "commit": "8a750cfb5a5ab6688b2253d54ca0af67c7c370ea"
         }
       ],
       "post-install": [
@@ -161,7 +161,7 @@
         {
           "type": "git",
           "url": "https://github.com/trevorsandy/ldview.git",
-          "commit": "6d8e21773de36fde5b87b60f715d400801a7e8bc"
+          "commit": "d1005cd098988e8ce4c3659becf415b0e62459ca"
         }
       ],
       "post-install": [
@@ -187,7 +187,7 @@
           "type": "git",
           "url": "https://github.com/trevorsandy/povray.git",
           "//": "Branch lpub3d/raytracer-cui",
-          "commit": "588ba80cc8a133dbb26c6e9f7bb1c3e8d4974313"
+          "commit": "6c9a22259571cef183adb775eb9a67aa168bcae0"
         }
       ],
       "modules": [
@@ -294,7 +294,7 @@
           "type": "git",
           "url": "https://github.com/trevorsandy/lpub3d.git",
           "tag": "v2.4.6",
-          "commit": "9aa1cb65d2a72acd39e86942afe9f93d83f7d842"
+          "commit": "be5d5fc5ac06c1e9189fab36d7eb94f64da89fd9"
         }
       ],
       "post-install": [
