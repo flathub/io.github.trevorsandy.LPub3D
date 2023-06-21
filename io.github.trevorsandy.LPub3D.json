@@ -166,7 +166,7 @@
       ],
       "post-install": [
         "mv -f /run/build/ldview/OSMesa/build_staging/* ${FLATPAK_DEST}/build_staging/",
-        "if test -d ${FLATPAK_DEST}/build_staging/ldview-4.4; then echo \"LDView staged to ${FLATPAK_DEST}/build_staging/ldview-4.4.\"; fi"
+        "if test -d ${FLATPAK_DEST}/build_staging/ldview-4.5; then echo \"LDView staged to ${FLATPAK_DEST}/build_staging/ldview-4.5.\"; fi"
       ]
     },
     {
@@ -293,7 +293,8 @@
         {
           "type": "git",
           "url": "https://github.com/trevorsandy/lpub3d.git",
-          "commit": "be5d5fc5ac06c1e9189fab36d7eb94f64da89fd9"
+          "tag": "v2.4.7",
+          "commit": "f5657bdfb4f19a00dcef5524e221b5bde16956ff"
         }
       ],
       "post-install": [
