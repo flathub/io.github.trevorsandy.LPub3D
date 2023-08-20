@@ -161,7 +161,7 @@
         {
           "type": "git",
           "url": "https://github.com/trevorsandy/ldview.git",
-          "commit": "d1005cd098988e8ce4c3659becf415b0e62459ca"
+          "commit": "bf976bb4d1be165981539191a5b7ff3f0727272b"
         }
       ],
       "post-install": [
@@ -293,7 +293,7 @@
         {
           "type": "git",
           "url": "https://github.com/trevorsandy/lpub3d.git",
-          "commit": "30bd4892f0ab0a3762860b082c75362c47fd858d"
+          "commit": "893aad4b392b148ea3ad1d744b29574662494201"
         }
       ],
       "post-install": [
