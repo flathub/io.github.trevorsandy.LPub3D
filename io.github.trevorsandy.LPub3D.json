@@ -94,7 +94,7 @@
         {
           "type": "file",
           "dest-filename": "complete.zip",
-          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/complete-23-09-07.zip",
+          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/complete-23-09.zip",
           "sha256": "869c16114fdad23f84147463b14c9713f709f22808f597c1409a4fa99a4d184c"
         },
         {
