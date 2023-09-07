@@ -9,6 +9,7 @@
   "rename-appdata-file": "lpub3d.appdata.xml",
   "build-options": {
     "env": {
+	  "LP3D_APP": "lpub3d",
       "LP3D_DIST_DIR_PATH": "/app/build_staging",
       "LDRAWDIR": "/app/build_staging/ldraw"
     }
@@ -93,14 +94,14 @@
         {
           "type": "file",
           "dest-filename": "complete.zip",
-          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/complete-23-02.zip",
-          "sha256": "fb40ca44677c688af32e056419b186c8a8b6f3cfb7c06e8c8717bb99c6007ad8"
+          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/complete-23-09.zip",
+          "sha256": "a161727acbd1e29732df9f00ba0a177cc4078513878124cb762ded3b9d3c3dad"
         },
         {
           "type": "file",
           "dest-filename": "lpub3dldrawunf.zip",
-          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/lpub3dldrawunf-23-06-19.zip",
-          "sha256": "41acebc1eebd4ef9d242581a79e575cb92e7d89e65cf8e729ca51108b1b0cbac"
+          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/lpub3dldrawunf-23-09-07.zip",
+          "sha256": "869c16114fdad23f84147463b14c9713f709f22808f597c1409a4fa99a4d184c"
         },
         {
           "type": "file",
@@ -135,7 +136,7 @@
         {
           "type": "git",
           "url": "https://github.com/trevorsandy/ldglite.git",
-          "commit": "8a750cfb5a5ab6688b2253d54ca0af67c7c370ea"
+          "commit": "07e0a8b9362b1a9720d2312967b78d32c9ef52c2"
         }
       ],
       "post-install": [
@@ -161,7 +162,7 @@
         {
           "type": "git",
           "url": "https://github.com/trevorsandy/ldview.git",
-          "commit": "bf976bb4d1be165981539191a5b7ff3f0727272b"
+          "commit": "dae9c1208fe79356c9f5ac88dad3485896616bc7"
         }
       ],
       "post-install": [
@@ -187,7 +188,7 @@
           "type": "git",
           "url": "https://github.com/trevorsandy/povray.git",
           "//": "Branch lpub3d/raytracer-cui",
-          "commit": "6c9a22259571cef183adb775eb9a67aa168bcae0"
+          "commit": "e6f332d9fa7ff28274618eb498ba21ab31d727e3"
         }
       ],
       "modules": [
@@ -293,7 +294,7 @@
         {
           "type": "git",
           "url": "https://github.com/trevorsandy/lpub3d.git",
-          "commit": "893aad4b392b148ea3ad1d744b29574662494201"
+          "commit": "b55cffe6e0e18280242cbdcdc046c759823b4701"
         }
       ],
       "post-install": [
