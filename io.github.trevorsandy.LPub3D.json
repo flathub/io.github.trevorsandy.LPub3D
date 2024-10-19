@@ -9,7 +9,7 @@
   "rename-appdata-file": "lpub3d.appdata.xml",
   "build-options": {
     "env": {
-	  "LP3D_APP": "lpub3d",
+      "LP3D_APP": "lpub3d",
       "LP3D_DIST_DIR_PATH": "/app/build_staging",
       "LDRAWDIR": "/app/build_staging/ldraw"
     }
@@ -163,6 +163,31 @@
           "type": "git",
           "url": "https://github.com/trevorsandy/ldview.git",
           "commit": "c23ff515ce0d1c8f41a421626f7b5a0e064832fd"
+        }
+      ],
+      "modules": [
+        {
+          "name": "minizip",
+          "subdir": "contrib/minizip",
+          "cleanup": [
+            "/include",
+            "*.a",
+            "*.la"
+          ],
+          "sources": [
+            {
+              "type": "archive",
+              "url": "https://zlib.net/zlib-1.3.1.tar.gz",
+              "sha256": "9a93b2b7dfdac77ceba5a558a580e74667dd6fede4585b91eefb60f03b72df23"
+            },
+            {
+              "type": "shell",
+              "commands": [
+                "echo \"autoreconf -ifv $@\" > contrib/minizip/autogen.sh",
+                "chmod a+x contrib/minizip/autogen.sh"
+              ]
+            }
+          ]
         }
       ],
       "post-install": [
