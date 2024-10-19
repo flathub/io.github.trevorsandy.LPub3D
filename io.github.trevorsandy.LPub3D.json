@@ -95,13 +95,13 @@
           "type": "file",
           "dest-filename": "complete.zip",
           "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/complete-23-09.zip",
-          "sha256": "a161727acbd1e29732df9f00ba0a177cc4078513878124cb762ded3b9d3c3dad"
+          "sha256": "0132e7f72cff4153f231737e45b9a57446101d48175d7ae71b097f1f6be06792"
         },
         {
           "type": "file",
           "dest-filename": "lpub3dldrawunf.zip",
           "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/lpub3dldrawunf-23-09-07.zip",
-          "sha256": "869c16114fdad23f84147463b14c9713f709f22808f597c1409a4fa99a4d184c"
+          "sha256": "13b94dc554ab9f5eae325da939fe046fe2b40cafc6697c957ea7eca4b394042e"
         },
         {
           "type": "file",
@@ -136,7 +136,7 @@
         {
           "type": "git",
           "url": "https://github.com/trevorsandy/ldglite.git",
-          "commit": "07e0a8b9362b1a9720d2312967b78d32c9ef52c2"
+          "commit": "6fbf6fa765d3eda15703f1e9e2489ad080ad474b"
         }
       ],
       "post-install": [
@@ -162,7 +162,7 @@
         {
           "type": "git",
           "url": "https://github.com/trevorsandy/ldview.git",
-          "commit": "dae9c1208fe79356c9f5ac88dad3485896616bc7"
+          "commit": "c23ff515ce0d1c8f41a421626f7b5a0e064832fd"
         }
       ],
       "post-install": [
@@ -188,7 +188,7 @@
           "type": "git",
           "url": "https://github.com/trevorsandy/povray.git",
           "//": "Branch lpub3d/raytracer-cui",
-          "commit": "e6f332d9fa7ff28274618eb498ba21ab31d727e3"
+          "commit": "6aca13dca2cb3f5ea3606e6d9e2ef29f4369b5a9"
         }
       ],
       "modules": [
@@ -294,7 +294,8 @@
         {
           "type": "git",
           "url": "https://github.com/trevorsandy/lpub3d.git",
-          "commit": "b55cffe6e0e18280242cbdcdc046c759823b4701"
+          "tag": "v2.4.8",
+          "commit": "fefe3daca8267229573576f1dc7cca6f4c3c858b"
         }
       ],
       "post-install": [
