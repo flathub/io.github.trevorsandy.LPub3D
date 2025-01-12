@@ -1,7 +1,7 @@
 {
   "id": "io.github.trevorsandy.LPub3D",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.15-23.08",
+  "runtime-version": "5.15-24.08",
   "sdk": "org.kde.Sdk",
   "command": "lpub3d24",
   "rename-icon": "lpub3d",
@@ -23,6 +23,7 @@
   "cleanup": [
     "/include",
     "/lib/pkgconfig",
+    "/lib/cmake",
     "/build_staging"
   ],
   "finish-args": [
@@ -238,9 +239,8 @@
           "sources": [
             {
               "type": "archive",
-              "//": "Boost 1.60 rquirement fixed so later version can be used - see https://github.com/POV-Ray/povray/pull/340",
-              "url": "https://downloads.sourceforge.net/project/boost/boost/1.60.0/boost_1_60_0.tar.bz2",
-              "sha256": "686affff989ac2488f79a97b9479efb9f2abae035b5ed4d8226de6857933fd3b"
+              "url": "https://downloads.sourceforge.net/project/boost/boost/1.75.0/boost_1_75_0.tar.bz2",
+              "sha256": "953db31e016db7bb207f11432bef7df100516eeb746843fa0486a222e3fd49cb"
             }
           ]
         },
