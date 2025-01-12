@@ -7,6 +7,12 @@
   "rename-icon": "lpub3d",
   "rename-desktop-file": "lpub3d.desktop",
   "rename-appdata-file": "lpub3d.appdata.xml",
+  "rename-mime-file": "lpub3d.xml",
+  "rename-mime-icons": [
+      "x-ldraw",
+      "x-multi-part-ldraw",
+      "x-multipart-ldraw"
+  ],
   "build-options": {
     "env": {
       "LP3D_APP": "lpub3d",
@@ -16,6 +22,7 @@
   },
   "cleanup": [
     "/include",
+    "/lib/pkgconfig",
     "/build_staging"
   ],
   "finish-args": [
@@ -324,8 +331,6 @@
         }
       ],
       "post-install": [
-        "mv ${FLATPAK_DEST}/share/mime/packages/lpub3d.xml ${FLATPAK_DEST}/share/mime/packages/${FLATPAK_ID}.xml",
-        "cd ${FLATPAK_DEST}/share/icons/hicolor; for d in */mimetypes/; do for f in ${d}*; do mv \"$f\" \"${d}${FLATPAK_ID}.$(basename $f)\"; done; done",
         "cp -a builds/check ${FLATPAK_DEST}/build_staging/ && echo \"Check bundle copied to ${FLATPAK_DEST}/build_staging/check.\""
       ]
     },
