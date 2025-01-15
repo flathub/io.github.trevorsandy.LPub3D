@@ -5,8 +5,8 @@
   "sdk": "org.kde.Sdk",
   "command": "lpub3d24",
   "rename-icon": "lpub3d",
-  "rename-desktop-file": "lpub3d.desktop",
   "rename-appdata-file": "lpub3d.appdata.xml",
+  "rename-desktop-file": "lpub3d.desktop",
   "rename-mime-file": "lpub3d.xml",
   "rename-mime-icons": [
       "x-ldraw",
@@ -102,14 +102,14 @@
         {
           "type": "file",
           "dest-filename": "complete.zip",
-          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/complete-24-10.zip",
-          "sha256": "0132e7f72cff4153f231737e45b9a57446101d48175d7ae71b097f1f6be06792"
+          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/complete-25-01.zip",
+          "sha256": "2d12ce3ef2819983af796a25724bad862137eae7059932d29f9b669ab8a7cbca"
         },
         {
           "type": "file",
           "dest-filename": "lpub3dldrawunf.zip",
-          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/lpub3dldrawunf-24-10-14.zip",
-          "sha256": "13b94dc554ab9f5eae325da939fe046fe2b40cafc6697c957ea7eca4b394042e"
+          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/lpub3dldrawunf-25-01-04.zip",
+          "sha256": "b6ef5b60e45b2f107979015c43a686a1c859a23e731d1508ef3f3103ce16cd21"
         },
         {
           "type": "file",
@@ -144,7 +144,7 @@
         {
           "type": "git",
           "url": "https://github.com/trevorsandy/ldglite.git",
-          "commit": "6fbf6fa765d3eda15703f1e9e2489ad080ad474b"
+          "commit": "26ee190caa49a5ab3088d962180d53d111792b6a"
         }
       ],
       "post-install": [
@@ -170,7 +170,7 @@
         {
           "type": "git",
           "url": "https://github.com/trevorsandy/ldview.git",
-          "commit": "c23ff515ce0d1c8f41a421626f7b5a0e064832fd"
+          "commit": "0fcb0e7f162906e20ec4e0521ac426b6fb0c3e77"
         }
       ],
       "modules": [
@@ -221,7 +221,7 @@
           "type": "git",
           "url": "https://github.com/trevorsandy/povray.git",
           "//": "Branch lpub3d/raytracer-cui",
-          "commit": "6aca13dca2cb3f5ea3606e6d9e2ef29f4369b5a9"
+          "commit": "cc6aeb73c52beadaadc0b9783ce83937c047237f"
         }
       ],
       "modules": [
@@ -326,8 +326,7 @@
         {
           "type": "git",
           "url": "https://github.com/trevorsandy/lpub3d.git",
-          "tag": "v2.4.8",
-          "commit": "fefe3daca8267229573576f1dc7cca6f4c3c858b"
+          "commit": "dfc1fb4f5be9c55526abf4adede4896969903744"
         }
       ],
       "post-install": [
