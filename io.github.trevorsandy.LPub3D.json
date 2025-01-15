@@ -326,14 +326,9 @@
           "type": "git",
           "url": "https://github.com/trevorsandy/lpub3d.git",
           "commit": "dfc1fb4f5be9c55526abf4adede4896969903744"
-        },
-		{
-			"type": "file",
-			"path": "io.github.trevorsandy.LPub3D.metainfo.xml"
-		}
+        }
       ],
       "post-install": [
-		"install -Dm644 ${FLATPAK_ID}.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo",
         "cp -a builds/check ${FLATPAK_DEST}/build_staging/ && echo \"Check bundle copied to ${FLATPAK_DEST}/build_staging/check.\""
       ]
     },
