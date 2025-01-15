@@ -5,6 +5,7 @@
   "sdk": "org.kde.Sdk",
   "command": "lpub3d24",
   "rename-icon": "lpub3d",
+  "rename-appdata-file": "lpub3d.appdata.xml",
   "rename-desktop-file": "lpub3d.desktop",
   "rename-mime-file": "lpub3d.xml",
   "rename-mime-icons": [
