@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <component type="desktop-application">
+        <id>io.github.trevorsandy.LPub3D</id>
+        <metadata_license>CC0-1.0</metadata_license>
+        <project_license>GPL-3.0</project_license>
+            <content_rating type="oars-1.1" />
+        <name>LPub3D</name>
+        <summary>LPub3D - An LDraw Building Instruction Editor</summary>
+        <description>
+            <p>
+              LPub3D is an Open Source WYSIWYG editing application for creating
+              LEGO® style digital building instructions. LPub3D is developed and
+              maintained by Trevor SANDY. It uses the LDraw™ parts library, the
+              most comprehensive library of digital Open Source LEGO® bricks
+              available (www.ldraw.org/) and reads the LDraw LDR and MPD model
+              file formats. LPub3D is available for free under the GNU Public License v3
+              and runs on Windows, Linux and macOS Operating Systems.
+              Portions of LPub3D are based on LPUB© 2007-2009 Kevin Clague,
+              LeoCAD© 2025 Leonardo Zide and additional third party components.
+              LEGO® is a trademark of the LEGO Group of companies which does not
+              sponsor, authorize or endorse this application.
+              © 2015-2025 Trevor SANDY.
+            </p>
+        </description>
+        <categories>
+            <category>Graphics</category>
+            <category>3DGraphics</category>
+            <category>Publishing</category>
+            <category>Engineering</category>
+        </categories>
+        <keywords>
+            <keyword>Building</keyword>
+            <keyword>CAD</keyword>
+            <keyword>CAI</keyword>
+            <keyword>Editor</keyword>
+            <keyword>Education</keyword>
+            <keyword>Instructions</keyword>
+            <keyword>LDraw</keyword>
+            <keyword>LEGO</keyword>
+            <keyword>Publishing</keyword>
+            <keyword>Renderer</keyword>
+            <keyword>Viewer</keyword>
+        </keywords>
+        <icon type="remote" width="64" height="64">https://trevorsandy.github.io/lpub3d/assets/icon/64x64/apps/lpub3d.png</icon>
+        <url type="bugtracker">https://github.com/trevorsandy/lpub3d/issues/new</url>
+        <url type="help">https://trevorsandy.github.io/lpub3d/</url>
+        <url type="homepage">https://trevorsandy.github.io/lpub3d/</url>
+        <screenshots>
+            <screenshot type="default">
+                <caption>Display step page</caption>
+                <image width="1609" height="849">https://raw.githubusercontent.com/flathub/io.github.trevorsandy.LPub3D/master/screenshots/1.png</image>
+            </screenshot>
+            <screenshot>
+                <caption>Step page</caption>
+                <image width="1850" height="950">https://raw.githubusercontent.com/flathub/io.github.trevorsandy.LPub3D/master/screenshots/2.png</image>
+            </screenshot>
+            <screenshot>
+                <caption>3D Viewer select</caption>
+                <image width="1848" height="950">https://raw.githubusercontent.com/flathub/io.github.trevorsandy.LPub3D/master/screenshots/3.png</image>
+            </screenshot>
+            <screenshot>
+                <caption>Step timeline properties</caption>
+                <image width="1840" height="950">https://raw.githubusercontent.com/flathub/io.github.trevorsandy.LPub3D/master/screenshots/4.png</image>
+            </screenshot>
+            <screenshot>
+                <caption>Meta commands</caption>
+                <image width="1650" height="880">https://raw.githubusercontent.com/flathub/io.github.trevorsandy.LPub3D/master/screenshots/5.png</image>
+            </screenshot>
+            <screenshot>
+                <caption>Renderer preferences</caption>
+                <image width="1848" height="950">https://raw.githubusercontent.com/flathub/io.github.trevorsandy.LPub3D/master/screenshots/6.png</image>
+            </screenshot>
+            <screenshot>
+                <caption>General Preferences</caption>
+                <image width="1848" height="950">https://raw.githubusercontent.com/flathub/io.github.trevorsandy.LPub3D/master/screenshots/7.png</image>
+            </screenshot>
+            <screenshot>
+                <caption>Project Page Settings</caption>
+                <image width="1844" height="954">https://raw.githubusercontent.com/flathub/io.github.trevorsandy.LPub3D/master/screenshots/8.png</image>
+            </screenshot>
+        </screenshots>
+        <launchable type="desktop-id">lpub3d.desktop</launchable>
+        <developer_name>Trevor SANDY</developer_name>
+        ​<provides>
+            <id>lpub3d.desktop</id>
+            <binary>lpub3d24</binary>
+        ​</provides>
+        <releases>
+            <release version="2.4.9.4066" date="2025-01-14">
+                <description>
+                    <p>LPub3D 14.01.2025 v2.4.9 r18 Continuous Build.
+                        - Enhancement - Inconsistency with parts list shape inputs #805
+                        - HowTo - Set theme check script in extras folder for Linux and macOS distros #806
+                        - Regression - Library Update failed #804
+                        - Fix - Submodel preview rotation #803
+                    </p>
+                </description>
+            </release>
+            <release version="2.4.9.4047" date="2025-01-07">
+                <description>
+                    <p>LPub3D 07.01.2025 v2.4.9 Release Build.
+                        See RELEASE_NOTES for full details.
+                    </p>
+                </description>
+            </release>
+            <release version="2.4.8.3953" date="2024-10-18">
+                <description>
+                    <p>LPub3D 18.10.2024 v2.4.8
+                       See RELEASE_NOTES for full details.
+                    </p>
+                </description>
+            </release>
+            <release version="2.4.7.3476" date="2023-06-21">
+                <description>
+                    <p>LPub3D 21.06.2023 v2.4.7
+                       See RELEASE_NOTES for full details.
+                    </p>
+                </description>
+            </release>
+            <release version="2.4.6.3001" date="2022-11-30">
+                <description>
+                    <p>
+                      LPub3D 30.11.2022 enhancements and fixes - see RELEASE_NOTES.html for details.
+                    </p>
+                </description>
+            </release>
+            <release version="2.4.5.2977" date="2022-11-24">
+                <description>
+                    <p>
+                      LPub3D 23.11.2022 enhancements and fixes - see RELEASE_NOTES.html for details.
+                    </p>
+                </description>
+            </release>
+            <release version="2.4.4.2670" date="2022-05-31">
+                <description>
+                    <p>
+                      LPub3D 31.05.2022 enhancements and fixes - see RELEASE_NOTES.html for details.
+                    </p>
+                </description>
+            </release>
+            <release version="2.4.3.2557" date="2021-05-14">
+                <description>
+                    <p>
+                      LPub3D 14.05.2021 enhancements and fixes - see RELEASE_NOTES.html for details.
+                    </p>
+                </description>
+            </release>
+            <release version="2.4.2.2432" date="2021-03-31">
+                <description>
+                    <p>
+                      LPub3D 31.03.2021 enhancements and fixes - see RELEASE_NOTES.html for details.
+                    </p>
+                </description>
+            </release>
+            <release version="2.4.1.2389" date="2021-03-15">
+                <description>
+                    <p>
+                      LPub3D 15.03.2021 enhancements and fixes - see RELEASE_NOTES.html for details.
+                    </p>
+                </description>
+            </release>
+            <release version="2.4.0.1990" date="2020-03-10">
+                <description>
+                    <p>
+                      LPub3D 03.10.2020 enhancements and fixes - see RELEASE_NOTES.html for details.
+                    </p>
+                </description>
+            </release>
+            <release version="2.3.13.1511" date="2019-09-10">
+                <description>
+                    <p>
+                      LPub3D 10.09.2019 enhancements and fixes - see RELEASE_NOTES.html for details.
+                    </p>
+                </description>
+            </release>
+            <release version="2.3.12.1356" date="2019-06-20">
+                <description>
+                    <p>
+                      LPub3D 20.06.2019 enhancements and fixes - see RELEASE_NOTES.html for details.
+                    </p>
+                </description>
+            </release>
+            <release version="2.3.11.1269" date="2019-05-17" />
+            <release version="2.3.10.1240" date="2019-04-23" />
+            <release version="2.3.9.1228" date="2019-04-18" />
+            <release version="2.3.8.1210" date="2019-04-08" />
+            <release version="2.3.7.1195" date="2019-03-27" />
+            <release version="2.3.6.1101" date="2018-12-19" />
+            <release version="2.3.5.1092" date="2018-12-17" />
+            <release version="2.3.4.1084" date="2018-12-10" />
+            <release version="2.3.3.1034" date="2018-10-27" />
+            <release version="2.3.2.998" date="2018-10-05" />
+            <release version="2.3.1.977" date="2018-10-03" />
+            <release version="2.3.0.887" date="2018-09-04" />
+            <release version="2.2.2.848" date="2018-04-12" />
+            <release version="2.2.1.824" date="2018-03-31" />
+            <release version="2.2.0.795" date="2018-03-16" />
+            <release version="2.1.0.775" date="2018-02-12" />
+            <release version="2.0.20.645" date="2017-02-10" />
+        </releases>
+    </component>
