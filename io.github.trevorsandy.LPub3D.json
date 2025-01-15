@@ -333,7 +333,7 @@
 		}
       ],
       "post-install": [
-		"install -Dm644 ${FLATPAK_ID}.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo"
+		"install -Dm644 ${FLATPAK_ID}.metainfo.xml -t ${FLATPAK_DEST}/share/metainfo",
         "cp -a builds/check ${FLATPAK_DEST}/build_staging/ && echo \"Check bundle copied to ${FLATPAK_DEST}/build_staging/check.\""
       ]
     },
