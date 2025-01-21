@@ -16,6 +16,7 @@
   "build-options": {
     "env": {
       "LP3D_APP": "lpub3d",
+      "LP3D_UTILS": "builds/utilities",
       "LP3D_DIST_DIR_PATH": "/app/build_staging",
       "LDRAWDIR": "/app/build_staging/ldraw"
     }
@@ -325,8 +326,15 @@
       "sources": [
         {
           "type": "git",
+          "disable-shallow-clone": true,
           "url": "https://github.com/trevorsandy/lpub3d.git",
-          "commit": "dfc1fb4f5be9c55526abf4adede4896969903744"
+          "commit": "13948b6f5ae4faa78c21faf4c52ec8acae758f30"
+        },
+        {
+          "type": "shell",
+          "commands": [
+            "(if test -f src/${LP3D_UTILS}/update-config-files.sh; then chmod a+x src/${LP3D_UTILS}/update-config-files.sh && cd src && bash ${LP3D_UTILS}/update-config-files.sh mainApp; fi)"
+          ]
         }
       ],
       "post-install": [
