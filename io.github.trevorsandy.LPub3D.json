@@ -328,7 +328,7 @@
           "type": "git",
           "disable-shallow-clone": true,
           "url": "https://github.com/trevorsandy/lpub3d.git",
-          "commit": "dfc1fb4f5be9c55526abf4adede4896969903744"
+          "commit": "13948b6f5ae4faa78c21faf4c52ec8acae758f30"
         },
         {
           "type": "shell",
