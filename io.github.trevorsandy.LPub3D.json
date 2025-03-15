@@ -103,14 +103,14 @@
         {
           "type": "file",
           "dest-filename": "complete.zip",
-          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/complete-25-01.zip",
-          "sha256": "2d12ce3ef2819983af796a25724bad862137eae7059932d29f9b669ab8a7cbca"
+          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/complete-25-02.zip",
+          "sha256": "a4ab15366d22ae0589901ec15bcc465fd5bb5b6057661b91b89b810f98a56c06"
         },
         {
           "type": "file",
           "dest-filename": "lpub3dldrawunf.zip",
-          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/lpub3dldrawunf-25-01-04.zip",
-          "sha256": "b6ef5b60e45b2f107979015c43a686a1c859a23e731d1508ef3f3103ce16cd21"
+          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/lpub3dldrawunf-25-03-15.zip",
+          "sha256": "a22da755a9c10cecf37928f4c951be00be9149146914de2a2b7a526906fdfd0e"
         },
         {
           "type": "file",
@@ -328,7 +328,7 @@
           "type": "git",
           "disable-shallow-clone": true,
           "url": "https://github.com/trevorsandy/lpub3d.git",
-          "commit": "13948b6f5ae4faa78c21faf4c52ec8acae758f30"
+          "commit": "b98113819af4e94e0716ac269d7ec7c7fcd3b056"
         },
         {
           "type": "shell",
