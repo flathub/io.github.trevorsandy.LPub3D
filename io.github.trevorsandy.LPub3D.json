@@ -83,8 +83,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://archive.mesa3d.org/mesa-20.2.6.tar.xz",
-          "sha256": "f12ca3c6c622f11cd79ad66b4220f04514fa96f795062fe92a37339ab19885db"
+          "url": "https://archive.mesa3d.org/older-versions/20.x/mesa-20.3.5.tar.xz",
+          "sha256": "909a72df63dfa3c0844ccf44a26ac028d148297ed333ab51560893923d7691ce"
         }
       ]
     },
