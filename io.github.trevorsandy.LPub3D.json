@@ -15,7 +15,7 @@
   ],
   "build-options": {
     "env": {
-      "LP3D_APP": "lpub3d",
+      "LP3D_APP": "lpub3d-ci",
       "LP3D_UTILS": "builds/utilities",
       "LP3D_EXTRAS": "mainApp/extras",
       "LP3D_DIST_DIR_PATH": "/app/build_staging",
@@ -174,7 +174,7 @@
         {
           "type": "git",
           "url": "https://github.com/trevorsandy/ldview.git",
-          "commit": "1419c25396314ac67230f8ee0eff6d0e71138d40"
+          "commit": "f0421e3562f4d8c1e1531231a4ddd31b43c7564d"
         }
       ],
       "modules": [
@@ -331,7 +331,7 @@
           "type": "git",
           "disable-shallow-clone": true,
           "url": "https://github.com/trevorsandy/lpub3d-ci.git",
-          "commit": "aa7aec08bdec091852f7fecaac443410131c86eb"
+          "commit": "33646da566c4fdacdb2e56b877a13e7f79242b3b"
         },
         {
           "type": "shell",
