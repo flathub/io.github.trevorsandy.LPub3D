@@ -17,6 +17,7 @@
     "env": {
       "LP3D_APP": "lpub3d",
       "LP3D_UTILS": "builds/utilities",
+      "LP3D_EXTRAS": "mainApp/extras",
       "LP3D_DIST_DIR_PATH": "/app/build_staging",
       "LDRAWDIR": "/app/build_staging/ldraw"
     }
@@ -97,7 +98,9 @@
         "mv -f lpub3dldrawunf.zip ${FLATPAK_DEST}/build_staging/",
         "mv -f tenteparts.zip ${FLATPAK_DEST}/build_staging/",
         "mv -f vexiqparts.zip ${FLATPAK_DEST}/build_staging/",
-        "unzip -d ${FLATPAK_DEST}/build_staging -q ${FLATPAK_DEST}/build_staging/complete.zip"
+        "unzip -d ${FLATPAK_DEST}/build_staging -q ${FLATPAK_DEST}/build_staging/complete.zip",
+        "ln -s ${FLATPAK_DEST}/build_staging/complete.zip ${FLATPAK_DEST}/build_staging/ldraw/complete.zip",
+        "ln -s ${FLATPAK_DEST}/build_staging/lpub3dldrawunf.zip ${FLATPAK_DEST}/build_staging/ldraw/lpub3dldrawunf.zip"
       ],
       "sources": [
         {
@@ -333,7 +336,15 @@
         {
           "type": "shell",
           "commands": [
-            "(if test -f src/${LP3D_UTILS}/update-config-files.sh; then chmod a+x src/${LP3D_UTILS}/update-config-files.sh && cd src && bash ${LP3D_UTILS}/update-config-files.sh mainApp; fi)"
+            "if test -f src/${LP3D_UTILS}/update-config-files.sh; then cd src && chmod a+x ${LP3D_UTILS}/update-config-files.sh && bash env OBS=false ${LP3D_UTILS}/update-config-files.sh mainApp; fi",
+            "test -f ${LP3D_EXTRAS}/complete.zip || cp -f ${FLATPAK_DEST}/build_staging/complete.zip ${LP3D_EXTRAS}/complete.zip",
+            "test -f ${LP3D_EXTRAS}/complete.zip && echo \"LDraw library complete.zip copied to ${LP3D_EXTRAS}\" || :",
+            "test -f ${LP3D_EXTRAS}/lpub3dldrawunf.zip || cp -f ${FLATPAK_DEST}/build_staging/lpub3dldrawunf.zip ${LP3D_EXTRAS}/lpub3dldrawunf.zip",
+            "test -f ${LP3D_EXTRAS}/lpub3dldrawunf.zip && echo \"LDraw library lpub3dldrawunf.zip copied to ${LP3D_EXTRAS}\" || :",
+            "test -f ${LP3D_EXTRAS}/tenteparts.zip || cp -f ${FLATPAK_DEST}/build_staging/tenteparts.zip ${LP3D_EXTRAS}/tenteparts.zip",
+            "test -f ${LP3D_EXTRAS}/tenteparts.zip && echo \"LDraw library tenteparts.zip copied to ${LP3D_EXTRAS}\" || :",
+            "test -f ${LP3D_EXTRAS}/vexiqparts.zip || cp -f ${FLATPAK_DEST}/build_staging/vexiqparts.zip ${LP3D_EXTRAS}/vexiqparts.zip",
+            "test -f ${LP3D_EXTRAS}/vexiqparts.zip && echo \"LDraw library vexiqparts.zip copied to ${LP3D_EXTRAS}\" || :"
           ]
         }
       ],
