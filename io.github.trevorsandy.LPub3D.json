@@ -349,6 +349,7 @@
         }
       ],
       "post-install": [
+        "if test -f ${FLATPAK_DEST}/bin/lpub3d24; then echo \"LPub3D installed to ${FLATPAK_DEST}/bin/lpub3d24.\"; fi",
         "cp -a builds/check ${FLATPAK_DEST}/build_staging/ && echo \"Check bundle copied to ${FLATPAK_DEST}/build_staging/check.\""
       ]
     },
@@ -359,27 +360,30 @@
         "prepend-path": "/app/build_staging/xvfb/bin",
         "prepend-ld-library-path": "/app/build_staging/xvfb/lib",
         "env": {
-          "FLATPAK_BUILD_CHECK": "1",
           "LP3D_CHECK_STATUS": "--version --app-paths",
           "LP3D_BUILD_OS": "flatpak",
           "LP3D_CHECK_LDD": "1",
-          "LPUB3D_DEST": "/app",
+          "LP3D_INSTALL": "/app/bin",
+          "LPUB3D_EXE": "/app/bin/lpub3d24",
+          "LDGLITE_EXE": "/app/bin/lpub3d/3rdParty/ldglite-1.3/bin/ldglite",
+          "LDVIEW_EXE": "/app/bin/lpub3d/3rdParty/ldview-4.6/bin/ldview",
+          "POVRAY_EXE": "/app/bin/lpub3d/3rdParty/lpub3d_trace_cui-3.8/bin/lpub3d_trace_cui",
           "SOURCE_DIR": "/run/build/build-check",
-          "QT_QPA_PLATFORM": "xcb",
-          "QT_QPA_PLATFORM_PLUGIN_PATH": "/usr/lib/plugins",
-          "QT_PLUGIN_PATH": "/usr/lib/plugins"
+          "QT_PLUGIN_PATH": "/usr/lib/plugins",
+          "QT_QPA_PLATFORM_PLUGIN_PATH": "/usr/lib/plugins/platforms",
+          "QT_QPA_PLATFORM": "xcb"
         }
       },
       "build-commands": [
-        "./builds/check/build_checks.sh"
+        "./check/build_checks.sh"
       ],
       "sources": [
         {
           "type": "shell",
           "commands": [
-            "install -d builds/check",
-            "cp -a ${FLATPAK_DEST}/build_staging/check/* builds/check/",
-            "chmod a+x builds/check/build_checks.sh"
+            "install -d check",
+            "cp -a ${FLATPAK_DEST}/build_staging/check/* check/",
+            "chmod a+x check/build_checks.sh"
           ]
         }
       ]
