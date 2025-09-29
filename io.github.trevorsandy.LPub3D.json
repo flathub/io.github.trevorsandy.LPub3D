@@ -1,7 +1,7 @@
 {
   "id": "io.github.trevorsandy.LPub3D",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.15-24.08",
+  "runtime-version": "6.9",
   "sdk": "org.kde.Sdk",
   "command": "lpub3d24",
   "rename-icon": "lpub3d",
@@ -15,8 +15,9 @@
   ],
   "build-options": {
     "env": {
-      "LP3D_APP": "lpub3d",
+      "LP3D_APP": "lpub3d-ci",
       "LP3D_UTILS": "builds/utilities",
+      "LP3D_EXTRAS": "mainApp/extras",
       "LP3D_DIST_DIR_PATH": "/app/build_staging",
       "LDRAWDIR": "/app/build_staging/ldraw"
     }
@@ -83,8 +84,8 @@
       "sources": [
         {
           "type": "archive",
-          "url": "https://archive.mesa3d.org/mesa-20.2.6.tar.xz",
-          "sha256": "f12ca3c6c622f11cd79ad66b4220f04514fa96f795062fe92a37339ab19885db"
+          "url": "https://archive.mesa3d.org/older-versions/20.x/mesa-20.3.5.tar.xz",
+          "sha256": "909a72df63dfa3c0844ccf44a26ac028d148297ed333ab51560893923d7691ce"
         }
       ]
     },
@@ -97,20 +98,22 @@
         "mv -f lpub3dldrawunf.zip ${FLATPAK_DEST}/build_staging/",
         "mv -f tenteparts.zip ${FLATPAK_DEST}/build_staging/",
         "mv -f vexiqparts.zip ${FLATPAK_DEST}/build_staging/",
-        "unzip -d ${FLATPAK_DEST}/build_staging -q ${FLATPAK_DEST}/build_staging/complete.zip"
+        "unzip -d ${FLATPAK_DEST}/build_staging -q ${FLATPAK_DEST}/build_staging/complete.zip",
+        "ln -s ${FLATPAK_DEST}/build_staging/complete.zip ${FLATPAK_DEST}/build_staging/ldraw/complete.zip",
+        "ln -s ${FLATPAK_DEST}/build_staging/lpub3dldrawunf.zip ${FLATPAK_DEST}/build_staging/ldraw/lpub3dldrawunf.zip"
       ],
       "sources": [
         {
           "type": "file",
           "dest-filename": "complete.zip",
-          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/complete-25-02.zip",
-          "sha256": "a4ab15366d22ae0589901ec15bcc465fd5bb5b6057661b91b89b810f98a56c06"
+          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/complete-25-09.zip",
+          "sha256": "13703b0eb55575b88b6a677c7b33c394246010af31d74adbc38ea74abc839633"
         },
         {
           "type": "file",
           "dest-filename": "lpub3dldrawunf.zip",
-          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/lpub3dldrawunf-25-03-15.zip",
-          "sha256": "a22da755a9c10cecf37928f4c951be00be9149146914de2a2b7a526906fdfd0e"
+          "url": "https://github.com/trevorsandy/lpub3d_libs/releases/download/v1.0.1/lpub3dldrawunf-25-09-04.zip",
+          "sha256": "43875f5b31f9f1bb309f36b0349eb823d50ef771f4283e792283bae32b7389d9"
         },
         {
           "type": "file",
@@ -145,7 +148,7 @@
         {
           "type": "git",
           "url": "https://github.com/trevorsandy/ldglite.git",
-          "commit": "26ee190caa49a5ab3088d962180d53d111792b6a"
+          "commit": "d8dc4157fb6bc441b486f6106c29b4c22732db17"
         }
       ],
       "post-install": [
@@ -171,7 +174,7 @@
         {
           "type": "git",
           "url": "https://github.com/trevorsandy/ldview.git",
-          "commit": "0fcb0e7f162906e20ec4e0521ac426b6fb0c3e77"
+          "commit": "f0421e3562f4d8c1e1531231a4ddd31b43c7564d"
         }
       ],
       "modules": [
@@ -201,7 +204,7 @@
       ],
       "post-install": [
         "mv -f /run/build/ldview/OSMesa/build_staging/* ${FLATPAK_DEST}/build_staging/",
-        "if test -d ${FLATPAK_DEST}/build_staging/ldview-4.5; then echo \"LDView staged to ${FLATPAK_DEST}/build_staging/ldview-4.5.\"; fi"
+        "if test -d ${FLATPAK_DEST}/build_staging/ldview-4.6; then echo \"LDView staged to ${FLATPAK_DEST}/build_staging/ldview-4.6.\"; fi"
       ]
     },
     {
@@ -222,7 +225,7 @@
           "type": "git",
           "url": "https://github.com/trevorsandy/povray.git",
           "//": "Branch lpub3d/raytracer-cui",
-          "commit": "cc6aeb73c52beadaadc0b9783ce83937c047237f"
+          "commit": "10b89c1a73fdc181607081a2f885349509e5dd04"
         }
       ],
       "modules": [
@@ -327,17 +330,26 @@
         {
           "type": "git",
           "disable-shallow-clone": true,
-          "url": "https://github.com/trevorsandy/lpub3d.git",
-          "commit": "8880540bb81270dbb37972306d1740208813bee9"
+          "url": "https://github.com/trevorsandy/lpub3d-ci.git",
+          "commit": "33646da566c4fdacdb2e56b877a13e7f79242b3b"
         },
         {
           "type": "shell",
           "commands": [
-            "(if test -f src/${LP3D_UTILS}/update-config-files.sh; then chmod a+x src/${LP3D_UTILS}/update-config-files.sh && cd src && bash ${LP3D_UTILS}/update-config-files.sh mainApp; fi)"
+            "if test -f src/${LP3D_UTILS}/update-config-files.sh; then cd src && chmod a+x ${LP3D_UTILS}/update-config-files.sh && bash env OBS=false ${LP3D_UTILS}/update-config-files.sh mainApp; fi",
+            "test -f ${LP3D_EXTRAS}/complete.zip || cp -f ${FLATPAK_DEST}/build_staging/complete.zip ${LP3D_EXTRAS}/complete.zip",
+            "test -f ${LP3D_EXTRAS}/complete.zip && echo \"LDraw library complete.zip copied to ${LP3D_EXTRAS}\" || :",
+            "test -f ${LP3D_EXTRAS}/lpub3dldrawunf.zip || cp -f ${FLATPAK_DEST}/build_staging/lpub3dldrawunf.zip ${LP3D_EXTRAS}/lpub3dldrawunf.zip",
+            "test -f ${LP3D_EXTRAS}/lpub3dldrawunf.zip && echo \"LDraw library lpub3dldrawunf.zip copied to ${LP3D_EXTRAS}\" || :",
+            "test -f ${LP3D_EXTRAS}/tenteparts.zip || cp -f ${FLATPAK_DEST}/build_staging/tenteparts.zip ${LP3D_EXTRAS}/tenteparts.zip",
+            "test -f ${LP3D_EXTRAS}/tenteparts.zip && echo \"LDraw library tenteparts.zip copied to ${LP3D_EXTRAS}\" || :",
+            "test -f ${LP3D_EXTRAS}/vexiqparts.zip || cp -f ${FLATPAK_DEST}/build_staging/vexiqparts.zip ${LP3D_EXTRAS}/vexiqparts.zip",
+            "test -f ${LP3D_EXTRAS}/vexiqparts.zip && echo \"LDraw library vexiqparts.zip copied to ${LP3D_EXTRAS}\" || :"
           ]
         }
       ],
       "post-install": [
+        "if test -f ${FLATPAK_DEST}/bin/lpub3d24; then echo \"LPub3D installed to ${FLATPAK_DEST}/bin/lpub3d24.\"; fi",
         "cp -a builds/check ${FLATPAK_DEST}/build_staging/ && echo \"Check bundle copied to ${FLATPAK_DEST}/build_staging/check.\""
       ]
     },
@@ -348,27 +360,30 @@
         "prepend-path": "/app/build_staging/xvfb/bin",
         "prepend-ld-library-path": "/app/build_staging/xvfb/lib",
         "env": {
-          "FLATPAK_BUILD_CHECK": "1",
           "LP3D_CHECK_STATUS": "--version --app-paths",
           "LP3D_BUILD_OS": "flatpak",
           "LP3D_CHECK_LDD": "1",
-          "LPUB3D_DEST": "/app",
+          "LP3D_INSTALL": "/app/bin",
+          "LPUB3D_EXE": "/app/bin/lpub3d24",
+          "LDGLITE_EXE": "/app/bin/lpub3d/3rdParty/ldglite-1.3/bin/ldglite",
+          "LDVIEW_EXE": "/app/bin/lpub3d/3rdParty/ldview-4.6/bin/ldview",
+          "POVRAY_EXE": "/app/bin/lpub3d/3rdParty/lpub3d_trace_cui-3.8/bin/lpub3d_trace_cui",
           "SOURCE_DIR": "/run/build/build-check",
-          "QT_QPA_PLATFORM": "xcb",
-          "QT_QPA_PLATFORM_PLUGIN_PATH": "/usr/lib/plugins",
-          "QT_PLUGIN_PATH": "/usr/lib/plugins"
+          "QT_PLUGIN_PATH": "/usr/lib/plugins",
+          "QT_QPA_PLATFORM_PLUGIN_PATH": "/usr/lib/plugins/platforms",
+          "QT_QPA_PLATFORM": "xcb"
         }
       },
       "build-commands": [
-        "./builds/check/build_checks.sh"
+        "./check/build_checks.sh"
       ],
       "sources": [
         {
           "type": "shell",
           "commands": [
-            "install -d builds/check",
-            "cp -a ${FLATPAK_DEST}/build_staging/check/* builds/check/",
-            "chmod a+x builds/check/build_checks.sh"
+            "install -d check",
+            "cp -a ${FLATPAK_DEST}/build_staging/check/* check/",
+            "chmod a+x check/build_checks.sh"
           ]
         }
       ]
