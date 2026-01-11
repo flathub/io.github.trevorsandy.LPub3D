@@ -1,7 +1,7 @@
 {
   "id": "io.github.trevorsandy.LPub3D",
   "runtime": "org.kde.Platform",
-  "runtime-version": "5.15-24.08",
+  "runtime-version": "5.15-25.08",
   "sdk": "org.kde.Sdk",
   "command": "lpub3d24",
   "rename-icon": "lpub3d",
@@ -42,6 +42,9 @@
       "build-options": {
         "cflags": "-fcommon"
       },
+      "config-opts": [
+        "-DCMAKE_POLICY_VERSION_MINIMUM=3.5"
+      ],
       "buildsystem": "cmake-ninja",
       "cleanup": [
         "/include",
@@ -53,6 +56,10 @@
           "type": "archive",
           "url": "https://downloads.sourceforge.net/project/freeglut/freeglut/3.2.1/freeglut-3.2.1.tar.gz",
           "sha256": "d4000e02102acaf259998c870e25214739d1f16f67f99cb35e4f46841399da68"
+        },
+        {
+          "type": "patch",
+          "path": "patches/freeglut-egl-proto.patch"
         }
       ]
     },
@@ -146,6 +153,10 @@
           "type": "git",
           "url": "https://github.com/trevorsandy/ldglite.git",
           "commit": "26ee190caa49a5ab3088d962180d53d111792b6a"
+        },
+        {
+          "type": "patch",
+          "path": "patches/ldglite-build.patch"
         }
       ],
       "post-install": [
