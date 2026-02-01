@@ -92,7 +92,7 @@
         },
         {
           "type": "patch",
-          "path": "../patches/libtirpc-proto.patch"
+          "path": "patches/libtirpc-proto.patch"
         }
       ]
     },
